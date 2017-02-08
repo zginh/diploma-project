@@ -1,0 +1,14 @@
+#!/bin/bash  
+
+DATASET="/home/bbz/Projects/dataset"
+
+for file in `ls $DATASET`  
+do  
+	path=$DATASET"/"$file  
+	
+	for ALG in "gzip" "bzip2" "7z" "rar" "lz4"
+	do  
+        echo 3 > /proc/sys/vm/drop_caches
+		./mzip $path --alg $ALG
+	done  
+done  
