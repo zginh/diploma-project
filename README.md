@@ -1,2 +1,2 @@
 # diploma-project
-deduplication-enhanced compression
+Deduplication-enhanced compression
